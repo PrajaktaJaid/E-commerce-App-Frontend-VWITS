@@ -1,0 +1,20 @@
+<button (click)="showAllAccounts()">Show all Accounts</button>
+<table border="1"  *ngIf="accounts.length>0"><!--ngIf is a directive-->
+    <tr>
+        <th>Account Number</th>
+        <th>Balance</th>
+        <th>Owner</th>
+        <th>Opening Date</th>
+        <th>Acction</th>
+    </tr>
+    <tr *ngFor="let a of accounts"> <!--ngFor is a directive-->
+        <td>{{a.accountNumber}}</td> <!--{{}} is used for string interpolation-->
+        <td>{{a.balance}}</td>
+        <td>{{a.owner}}</td>
+        <td>{{a.openingDate}}</td>
+        <td>
+            <button  class="btn btn-danger">Delete</button>
+            <button>Update</button>
+        </td>
+    </tr>
+</table>
