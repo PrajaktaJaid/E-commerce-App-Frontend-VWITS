@@ -1,0 +1,12 @@
+<form class="account-form">
+    <h2>Creat New Account</h2>
+    <div class="form-group">
+        <label for="accountBalance">Account Balance:</label>
+        <input type="text" name="accountBalance" [(ngModel)]="account.balance" placeholder="Enter Account Opening Balance">
+    </div>
+    <div class="form-group">
+        <label for="accountHolder">Account Owner:</label>
+        <input type="text" name="accountHolder" [(ngModel)]="account.owner" placeholder="Enter Account Owner Name">
+    </div>
+    <button type="submit" (click)="openNewAccount()">Open Account</button>
+</form>

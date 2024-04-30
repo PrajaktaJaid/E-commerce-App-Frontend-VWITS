@@ -1,7 +1,6 @@
-
 export class Customer{
-constructor(
-    public userName:string,
-    public password:string,
- ){ }
+    constructor(
+        public username:string,
+        public password:string
+    ){}
 }

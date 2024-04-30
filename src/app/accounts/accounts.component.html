@@ -1,20 +1,27 @@
-<button (click)="showAllAccounts()">Show all Accounts</button>
-<table border="1"  *ngIf="accounts.length>0"><!--ngIf is a directive-->
-    <tr>
-        <th>Account Number</th>
-        <th>Balance</th>
-        <th>Owner</th>
-        <th>Opening Date</th>
-        <th>Acction</th>
-    </tr>
-    <tr *ngFor="let a of accounts"> <!--ngFor is a directive-->
-        <td>{{a.accountNumber}}</td> <!--{{}} is used for string interpolation-->
-        <td>{{a.balance}}</td>
-        <td>{{a.owner}}</td>
-        <td>{{a.openingDate}}</td>
-        <td>
-            <button  class="btn btn-danger">Delete</button>
-            <button>Update</button>
-        </td>
-    </tr>
-</table>
+<button (click)="showAllAccounts()">Show All</button>
+<div class="accounts-container" *ngIf="accounts.length>0">
+    <h2>Accounts</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Account Number</th>
+                <th>Account Holder</th>
+                <th>Current Balance</th>
+                <th>Open Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of accounts">
+            <td>{{account.accountNumber}}</td>
+            <td>{{account.owner | uppercase}}</td>
+            <td>{{account.balance | currency : 'INR'}}</td>
+            <td>{{account.openingDate | date : 'mediumDate'}}</td>
+            <td>
+                <button class="update-btn">Update</button>
+                <button class="delete-btn">Delete</button>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,40 @@
+.accounts-container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h2{
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-color: #f9f9f9;
+}
+th,td{
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+th{
+    background-color: #333;
+    color: var(--text-color);
+}
+tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.update-btn,.delete-btn{
+padding: 8px 15px;
+border: none;
+background-color: #007bff;
+color: var(--text-color);
+cursor: pointer;
+margin-right: 5px;
+border-radius: 5px;
+}
+.delete-btn{
+    background-color: #dc3545;
+}

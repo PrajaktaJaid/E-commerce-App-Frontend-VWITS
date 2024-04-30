@@ -1,0 +1,23 @@
+nav{
+    margin-left: auto;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    display: inline-block;
+    margin-left: 20px;
+}
+a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+a:hover{
+    background-color: var(--link-hover-color);
+    border-radius: 5px;
+}

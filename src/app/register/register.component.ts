@@ -1,30 +1,38 @@
 import { Component } from '@angular/core';
 import { Customer } from '../model/Customer';
-import { InmemoerycustomerService } from '../servcie/inmemoerycustomer.service';
-import { CustomerrestserviceService } from '../servcie/customerrestservice.service';
+import { CustomerrestService } from '../service/customerrest.service';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-//This is dependency injection
-c= new Customer('','');
-  constructor(private service:CustomerrestserviceService){
-    
+  customer= new Customer('','');
+  // This is dependency injection
+  constructor(private service:CustomerrestService){
+  
   }
+  // username:string='';
+  // password:string='';
+  successMessage:string='';
+  errorMessage:string='';
+// this method executed when users clicks register buttom in html
+  performRegistration(){
+  
+  //Create a customer object with these values of username and password
  
-  //This method should be executed when user clicks register
-  performRegistration() {
-    //Create a customer object with these values of username and password
-    alert(this.c.userName + '  ' + this.c.password);
-   // let customer = new Customer(this.username, this.password);
-
-    //ToDo Pass this customer object to server
-    this.service.registerCustomer(this.c);
-    //Component is responsible for UI and event binding only
-    //Deal with data and calling backend rest calls or services is a different responsibility
-    //hence angular recomends carry out this functionality use service
-  }
+  let result=this.service.registerCustomer(this.customer).subscribe(result=>console.log(result));
+ if(result){
+   this.errorMessage = '';
+   this.successMessage = 'Registration successful !';
+ }else{
+   this.successMessage = '';
+   this.errorMessage = 'Registration Failed !'
+ }
+  //TODO pass this data to server
+  // Component is responsible for only UI and event binding.
+  // Dealing with data and calling backend rest calls or services is a different responsibility hence angular recommends
+  // carry out this function
+}
 }

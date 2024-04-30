@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title '1-hello-world'`, () => {
+  it(`should have as title 'component-interpolation-directives'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('1-hello-world');
+    expect(app.title).toEqual('component-interpolation-directives');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('1-hello-world app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('component-interpolation-directives app is running!');
   });
 });

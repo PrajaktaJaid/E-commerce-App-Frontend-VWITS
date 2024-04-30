@@ -1,22 +1,18 @@
 import { Component } from '@angular/core';
 import { Account } from '../model/Account';
-import { AccountService } from '../servcie/account.service';
+import { AccountService } from '../service/account.service';
 
 @Component({
   selector: 'app-accounts',
   templateUrl: './accounts.component.html',
-  styleUrls: ['./accounts.component.css'],
+  styleUrls: ['./accounts.component.css']
 })
 export class AccountsComponent {
-  accounts: Account[] = [];
+accounts: Account[]=[]
+constructor(private service:AccountService){
 
-  constructor(private service: AccountService) {
-
-  }
-  showAllAccounts(){
-    console.log("Before");
-    this.service.findAll().subscribe((sucess) => console.log(this.accounts=sucess));
-    console.log("Done");
-
-  }
+}
+showAllAccounts(){
+   this.service.findAll().subscribe((result)=>this.accounts=result);
+ }
 }

@@ -1,0 +1,18 @@
+header{
+    background-color: var(--primary-color);
+    padding:20px 0;
+    border-radius: 5px;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+h1{
+    color: var(--text-color);
+    font-size: 24px;
+    margin: 0;
+}

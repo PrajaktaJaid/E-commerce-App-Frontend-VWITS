@@ -1,0 +1,28 @@
+.content{
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3
+    );
+}
+.content h2{
+    color: var(--text-color);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.content p{
+    color: var(--text-color);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.action-link{
+    color:#3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+.action-link:hover{
+    text-decoration: underline;
+}
