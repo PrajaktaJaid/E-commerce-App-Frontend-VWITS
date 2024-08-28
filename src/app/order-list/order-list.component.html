@@ -1,0 +1,31 @@
+<div class="order-container" >
+    <h2>Orders</h2>
+    <table>
+        <thead>
+            <tr>
+
+                <th>Order Id</th>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Coupon Code</th>
+                <th>Discount</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orderList"> 
+               <td>{{order.id}}</td>
+               <td>{{order.item}}</td>
+               <td>{{order.price}}</td>
+               <td>{{order.status}}</td>
+               <td>{{order.couponCode}}</td>
+               <td>{{order.discount}}</td>
+               <td>
+                <button class="palace-btn" (click)="placeOrder(order.id)">Place Order</button>
+                <button class="cancel-btn" (click)="cancelOrder(order.id)">Cancel Order</button>
+               </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-appName="VWITS Bankify";
+  appName:string="VWITS E-Commerce Store"
 }

@@ -1,14 +1,14 @@
-.login-container{
+.coupon-container{
     max-width: 300px;
     margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color:beige;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h2{
-    color: #333;
+    color:black;
     text-align: center;
 }
 .form-group{
@@ -17,10 +17,9 @@ h2{
 label{
     display: block;
     margin-bottom: 5px;
-    color:#333;
+    color:black;
 }
-input[type="text"],
-input[type="password"]{
+input[type="number"],[type="text"]{
     width: 92%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -31,26 +30,27 @@ button{
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color:darkgray;
+    color: #333;
     cursor: pointer;
 }
 button:hover{
-    background-color: #0056b3;
+    background-color:burlywood;
 }
 .success{
     margin-top: 10px;
     padding: 10px;
     border-radius: 5px;
-    background-color: #d4edda;
-    color: #155724;
+    background-color: green;
+    color:black;
     border: 1px solid #c3e6cb;
 }
 .error{
     margin-top: 10px;
     padding: 10px;
     border-radius: 5px;
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
+    background-color: #fc0d0d;
+    border: 1px solid #fcc2c3;
+    color:black;
+
 }

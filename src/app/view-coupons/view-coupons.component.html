@@ -1,0 +1,18 @@
+<div class="coupon-container" >
+    <h2>Available Coupons</h2>
+    <table>
+        <thead>
+            <tr>
+
+                <th>Coupon Code</th>
+                <th>Coupon Discount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let coupon of coupons"> 
+               <td>{{coupon.couponCode}}</td>
+               <td>{{coupon.discount}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

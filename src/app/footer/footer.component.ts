@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  footerText="VWITS Bankify, All rights reserved."
+  footerText:string='VWITS eCommerce, All rights are reserved';
 }

@@ -1,0 +1,16 @@
+<div class="coupon-container">
+    <h2>Create New Coupon</h2>
+    <form>
+        <div class="form-group">
+            <label for="coupon">Coupon Code:</label>
+            <input type="text" name="coupon" id="coupon" placeholder="Enter Unique Coupon Code" required [(ngModel)]="coupon.couponCode">
+        </div>
+        <div class="form-group">
+            <label for="discount">Discount:</label>
+            <input type="number" name="discount" id="discount" placeholder="Enter Discount" [(ngModel)]="coupon.discount">
+        </div>
+        <button type="submit" (click)="createCoupon()">Create</button>
+    </form>
+     <div *ngIf="successMessage" class="success" role="alert">{{successMessage}}</div> 
+     <div *ngIf="errorMessage" class="error" role="alert">{{errorMessage}}</div>   
+</div>
